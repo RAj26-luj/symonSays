@@ -48,7 +48,7 @@ function check(ele){
 }let max=0;
 function reset(){comp=[];
 user=[];max=Math.max(max,(level-1)*5);
-level=1;
+level=0;
 start=false;
 let bdy=document.querySelector("body");
   bdy.classList.add("over");
