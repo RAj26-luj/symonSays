@@ -26,11 +26,12 @@ function blink(e){
     },150);            
 }
 let els=document.querySelectorAll(".el");
-if(start==true){}
+
 for(let ele of els){
     ele.addEventListener("click",function (){
     blink(ele);
-    check(ele);
+    if(start==true){check(ele);}
+    
     
 }
 
