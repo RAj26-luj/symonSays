@@ -1,6 +1,6 @@
 let comp=[];
 let user=[];
-let level=1;
+let level=0;
 let start=false;
 let h3=document.querySelector("h3");
 document.addEventListener("keypress",()=>{
