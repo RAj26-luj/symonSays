@@ -1,6 +1,6 @@
 let comp=[];
 let user=[];
-let level=0;
+let level=1;
 let start=false;
 let h3=document.querySelector("h3");
 document.addEventListener("keypress",()=>{
@@ -48,7 +48,7 @@ function check(ele){
 }let max=0;
 function reset(){comp=[];
 user=[];max=Math.max(max,(level-1)*5);
-level=0;
+level=1;
 start=false;
 let bdy=document.querySelector("body");
   bdy.classList.add("over");
