@@ -1,144 +1,67 @@
-/* === Global Styles === */
-body {
-    margin: 0;
-    padding: 0;
+body{
     text-align: center;
-    background-image: url(landscape_comp.jpeg);
-    background-size: cover;
-    background-position: center;
-    font-family: 'Courier New', Courier, monospace;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+background-image: url(landscape_comp.jpeg);
 
-/* === Main Game Container === */
-.main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 90vh;
-}
+background-size: cover;
 
-/* === Header Styling === */
-.header h1 {
-    font-size: 3rem;
-    color: antiquewhite;
-    text-shadow: 2px 2px 4px #000000;
-    margin: 0.5em 0;
-    transition: all 0.3s ease-in-out;
-}
 
-.header h1:hover {
-    font-weight: lighter;
-    color: #f0f0f0;
 }
-
-.header h3 {
-    font-size: 1.2rem;
-    color: antiquewhite;
-    text-shadow: 1px 1px 2px #000000;
-    margin-bottom: 2rem;
-}
-
-/* === Game Box (Button Grid) === */
-.game-box {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Rows */
-.row1, .row2 {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-
-/* === Buttons === */
-.el {
-    width: 130px;
-    height: 130px;
+.el{
+    height: 200px;
+    width:200px;
     border: solid 4px rgb(30, 5, 5);
-    border-radius: 20px;
-    box-shadow: #000 0px 10px 20px;
-    transition: transform 0.2s ease-in-out;
+    margin: 10px;
+     border-radius:20px ;
+     box-shadow: #000 0px 10px 20px;
+     
 }
-
-.el:hover {
-    transform: scale(1.05);
+.box{
+    display: flex;
+    flex-direction: column;
+    
 }
-
-#color1 {
-    background-color: #fc8e28;
-    border-top-left-radius: 200px;
+.row1 ,.row2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}.game-box{
+    margin-top: 29px;
 }
-#color2 {
-    background-color: #dd3064;
-    border-top-right-radius: 200px;
+#color1{
+background-color: #fc8e28;border-top-left-radius: 200px;
 }
-#color3 {
-    background-color: #3d6af0;
-    border-bottom-left-radius: 200px;
+#color2{
+   background-color: #dd3064; border-top-right-radius: 200px;
 }
-#color4 {
-    background-color: #63aac0;
-    border-bottom-right-radius: 200px;
+#color3{
+    background-color: #3d6af0;border-bottom-left-radius: 200px;
 }
-
-/* === Blink Effect === */
-.blink {
+#color4{
+    background-color: #63aac0;border-bottom-right-radius: 200px;
+}
+.main{
+    margin-top: 100px;;
+}
+h1,h3{
+    color:antiquewhite;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: 'Courier New', Courier, monospace;
+}
+.el:hover{
+ 
+    transform: scale(1.02);
+    transition: all 0.2s ease-in-out;
+}
+h1:hover{
+    font-weight: lighter;
+    color: #f0f0f0; 
+}
+.blink{
     background-color: #fff;
-    opacity: 0.5;
+    opacity:0.5;
 }
-
-/* === Game Over Background === */
-.over {
+.over{
     background-image: url(istockphoto-1325433246-640x640.jpg);
     background-size: cover;
-    background-position: center;
-}
-
-/* === Responsive Design === */
-
-/* Tablets and below */
-@media (max-width: 768px) {
-    .el {
-        width: 100px;
-        height: 100px;
-    }
-
-    .header h1 {
-        font-size: 2.5rem;
-    }
-
-    .header h3 {
-        font-size: 1.1rem;
-    }
-}
-
-/* Phones */
-@media (max-width: 480px) {
-    .row1, .row2 {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .el {
-        width: 80vw;
-        height: 80vw;
-        max-width: 200px;
-        max-height: 200px;
-    }
-
-    .header h1 {
-        font-size: 2.2rem;
-    }
-
-    .header h3 {
-        font-size: 1rem;
-    }
 }
