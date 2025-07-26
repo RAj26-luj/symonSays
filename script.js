@@ -6,8 +6,16 @@ let h3=document.querySelector("h3");
 document.addEventListener("keypress",()=>{
 
 if(start==false){
+     alert("Game has been started!");
     levelup();}
-})
+});
+ document.getElementById("heading").addEventListener("click", function() {
+   
+    if(start==false){
+         alert("Game has been started!");
+    levelup();}
+}
+  );
 function levelup(){   level++;
 h3.innerText=`LEVEL ${level}  SCORE ${(level-1)*5} HIGH SCORE ${max}`;
 start=true;
