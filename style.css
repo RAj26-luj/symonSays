@@ -1,57 +1,75 @@
-/* Base styles */
+/* === Global Styles === */
 body {
+    margin: 0;
+    padding: 0;
     text-align: center;
     background-image: url(landscape_comp.jpeg);
     background-size: cover;
     background-position: center;
-    margin: 0;
-    padding: 0;
-}
-
-.main {
-    margin-top: 8vh;
-}
-
-h1, h3 {
-    color: antiquewhite;
-    text-shadow: 2px 2px 4px #000000;
     font-family: 'Courier New', Courier, monospace;
-    margin: 0.5em 0;
-}
-
-h1:hover {
-    font-weight: lighter;
-    color: #f0f0f0;
-}
-
-.game-box {
-    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* === Main Game Container === */
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+}
+
+/* === Header Styling === */
+.header h1 {
+    font-size: 3rem;
+    color: antiquewhite;
+    text-shadow: 2px 2px 4px #000000;
+    margin: 0.5em 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.header h1:hover {
+    font-weight: lighter;
+    color: #f0f0f0;
+}
+
+.header h3 {
+    font-size: 1.2rem;
+    color: antiquewhite;
+    text-shadow: 1px 1px 2px #000000;
+    margin-bottom: 2rem;
+}
+
+/* === Game Box (Button Grid) === */
+.game-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Rows */
 .row1, .row2 {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    gap: 1rem;
 }
 
-/* Colored buttons */
+/* === Buttons === */
 .el {
-    width: 30vw;
-    max-width: 150px;
-    height: 30vw;
-    max-height: 150px;
+    width: 130px;
+    height: 130px;
     border: solid 4px rgb(30, 5, 5);
-    margin: 1rem;
     border-radius: 20px;
     box-shadow: #000 0px 10px 20px;
-    transition: all 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
 }
 
 .el:hover {
-    transform: scale(1.02);
+    transform: scale(1.05);
 }
 
 #color1 {
@@ -71,65 +89,56 @@ h1:hover {
     border-bottom-right-radius: 200px;
 }
 
-/* Blink effect */
+/* === Blink Effect === */
 .blink {
     background-color: #fff;
     opacity: 0.5;
 }
 
-/* Game over background */
+/* === Game Over Background === */
 .over {
     background-image: url(istockphoto-1325433246-640x640.jpg);
     background-size: cover;
     background-position: center;
 }
 
-/* Responsive styles */
+/* === Responsive Design === */
+
+/* Tablets and below */
 @media (max-width: 768px) {
     .el {
-        width: 35vw;
-        height: 35vw;
-        max-width: 120px;
-        max-height: 120px;
+        width: 100px;
+        height: 100px;
     }
 
-    h1 {
-        font-size: 1.8rem;
+    .header h1 {
+        font-size: 2.5rem;
     }
 
-    h3 {
-        font-size: 1.2rem;
+    .header h3 {
+        font-size: 1.1rem;
     }
 }
 
+/* Phones */
 @media (max-width: 480px) {
-  .row1, .row2 {
-    flex-direction: column;
-    align-items: center;
-  }
+    .row1, .row2 {
+        flex-direction: column;
+        gap: 1rem;
+    }
 
-  .el {
-    width: 60vw;
-    height: 60vw;
-    max-width: 200px;
-    max-height: 200px;
-    margin: 1rem auto;
-  }
+    .el {
+        width: 80vw;
+        height: 80vw;
+        max-width: 200px;
+        max-height: 200px;
+    }
 
-  /* Hide all buttons except color1 on small screens */
-  #color2, #color3, #color4 {
-    display: none;
-  }
+    .header h1 {
+        font-size: 2.2rem;
+    }
 
-  h3 {
-    font-size: 1rem;
-  }
-
-  h1 {
-    font-size: 1.4rem;
-  }
-
-  .main {
-    margin-top: 10vh;
-  }
+    .header h3 {
+        font-size: 1rem;
+    }
 }
