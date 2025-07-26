@@ -103,22 +103,33 @@ h1:hover {
 }
 
 @media (max-width: 480px) {
-    .el {
-        width: 40vw;
-        height: 40vw;
-        max-width: 100px;
-        max-height: 100px;
-    }
+  .row1, .row2 {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    h1 {
-        font-size: 1.5rem;
-    }
+  .el {
+    width: 60vw;
+    height: 60vw;
+    max-width: 200px;
+    max-height: 200px;
+    margin: 1rem auto;
+  }
 
-    h3 {
-        font-size: 1rem;
-    }
+  /* Hide all buttons except color1 on small screens */
+  #color2, #color3, #color4 {
+    display: none;
+  }
 
-    .main {
-        margin-top: 4vh;
-    }
+  h3 {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .main {
+    margin-top: 10vh;
+  }
 }
