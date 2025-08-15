@@ -8,17 +8,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.addEventListener("keypress", () => {
     if (start == false) {
-      alert("Game has been started!");
       levelup();
     }
   });
 
-  document.getElementById("heading").addEventListener("click", function () {
+  document.querySelector(".start").addEventListener("click", function () {
     if (start == false) {
-      alert("Game has been started!");
       levelup();
     }
-  });
+});
 
   function levelup() {
     level++;
@@ -58,8 +56,9 @@ document.addEventListener("DOMContentLoaded", () => {
       if (user.length == comp.length) {
         setTimeout(levelup, 500);
       }
-    } else {
-      h3.innerText = `Game over. Your score is ${(level - 1) * 5}. Press any key to restart.`;
+    } else {max=Math.max(max, (level - 1) * 5);
+      h3.innerHTML = `GAME OVER. Your score is ${(level - 1) * 5}. HIGH SCORE ${max}.<br><br> Press any key or press here to  <button class="start">restart</button>`;
+      document.querySelector(".start").addEventListener("click", levelup);
       reset();
     }
   }
